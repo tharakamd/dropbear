@@ -17,13 +17,13 @@ const parenthesize = (tokens) => {
     return expression;
   }
 
-  return tokens;
+  return token;
 };
 
 const parse = (tokens) => {
 
   if (Array.isArray(tokens)) {
-    const [first, ...rest] = [tokens];
+    const [first, ...rest] = tokens;
     return {
       type: 'CallExpression',
       name: first.value,
